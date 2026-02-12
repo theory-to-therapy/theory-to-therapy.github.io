@@ -15,13 +15,6 @@ function loadComponents() {
         <ul class="main__ul">
             <li><a href="index.html">Home</a></li>
             <li><a href="dates.html">Important Dates</a></li>
-            <li><a href="#">Calls</a>
-                <ul class="dropdown">
-                    <li><a href="#">Track 1</a></li>
-                    <li><a href="#">Track 2</a></li>
-                    <li><a href="#">Track 3</a></li>
-                </ul>
-            </li>
             <li><a href="#">Submissions</a></li>
             <li><a href="#">Venue/Local</a>
             <ul class="dropdown">
@@ -30,9 +23,8 @@ function loadComponents() {
                 <li><a href="#">Item 3</a></li>
             </ul>
             </li>
-            <li><a href="#">Organization</a></li>
+            <li><a href="#">Organisation</a></li>
             <li><a href="#">Program</a></li>
-            <li><a href="#">Sponsoring</a></li>
             <li><a href="#" class="link-btn">Registration</a></li>
         </ul>
     </nav>
