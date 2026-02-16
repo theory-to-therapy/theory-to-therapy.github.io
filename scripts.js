@@ -14,18 +14,12 @@ function loadComponents() {
         </a>
         <ul class="main__ul">
             <li><a href="index.html">Home</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="schedule.html">Program</a></li>
             <li><a href="dates.html">Important Dates</a></li>
-            <li><a href="#">Submissions</a></li>
-            <li><a href="#">Venue/Local</a>
-            <ul class="dropdown">
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-            </ul>
-            </li>
-            <li><a href="#">Organisation</a></li>
-            <li><a href="#">Program</a></li>
-            <li><a href="#" class="link-btn">Registration</a></li>
+            <li><a href="about.html">About & Venue</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="registration.html" class="link-btn">Registration</a></li>
         </ul>
     </nav>
     <div id='menu' class='box-icon'><i class='bx bx-menu'></i></div>
@@ -34,7 +28,7 @@ function loadComponents() {
 
     footer = `
     <footer>
-        <p>© Copyright 2025. Conferece Website Template - Designed by <a href="https://github.com/nahimsouza/conference-website/">nahimsouza</a>. MIT License.</p>
+        <p>© 2026 The Next Frontier in Medical Data. Website template by <a href="https://github.com/nahimsouza/conference-website/" target="_blank">nahimsouza</a>.</p>
     </footer>
     `
 

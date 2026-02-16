@@ -155,7 +155,7 @@ main {
     align-items: center;
     justify-content: left;
     padding-left: 25px;
-    background-image: url("images/gallery/saopaulo1.jpg");
+    background-image: url("images/gallery/Durham-uni-86156.png");
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -207,10 +207,6 @@ main {
     /* Scroll */
     flex: 1;
     overflow-y: auto;
-}
-
-.content-text p {
-    
 }
 
 .sponsors {
@@ -375,6 +371,168 @@ main p {
     max-width: 100%;
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Speaker Cards */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.speaker-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.speaker-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #0092f6;
+}
+
+.speaker-card h4 {
+    color: #1d3d55;
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+}
+
+.speaker-card .affiliation {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.speaker-card .bio {
+    color: #3a3a3a;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.speaker-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.speaker-links a {
+    color: #0092f6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.speaker-links a:hover {
+    color: #0073c0;
+}
+
+/* Schedule/Timeline Styles */
+.schedule-day {
+    margin-bottom: 40px;
+}
+
+.schedule-item {
+    background-color: #fff;
+    border-left: 4px solid #0092f6;
+    padding: 20px 25px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-time {
+    color: #0092f6;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.schedule-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d3d55;
+    margin-bottom: 5px;
+}
+
+.schedule-speaker {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.schedule-description {
+    color: #3a3a3a;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Committee Cards */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.committee-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.committee-card h4 {
+    color: #1d3d55;
+    margin: 10px 0 5px 0;
+}
+
+.committee-card .role {
+    color: #0092f6;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.committee-card .affiliation {
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.committee-card .email {
+    margin-top: 10px;
+}
+
+.committee-card .email a {
+    color: #f97c00;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.committee-card .email a:hover {
+    text-decoration: underline;
 }
 
 .bx-menu {
