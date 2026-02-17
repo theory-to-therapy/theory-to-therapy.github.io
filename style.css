@@ -209,6 +209,54 @@ main {
     overflow-y: auto;
 }
 
+/* Better paragraph spacing */
+.content-text p {
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+/* Highlighted content box */
+.highlight-box {
+    background: linear-gradient(135deg, #f7fbff 0%, #e8f4ff 100%);
+    border-left: 4px solid #0092f6;
+    padding: 25px 30px;
+    margin: 25px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 146, 246, 0.1);
+}
+
+.highlight-box h4 {
+    color: #0092f6;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Styled topic list */
+.topics-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.topics-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.topics-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #0092f6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .sponsors {
     display: flex;
     align-items: center;
@@ -231,9 +279,10 @@ main {
 }
 
 .sponsors img {
-    width: 30%;
-    max-height: 120px;
+    height: 100px;
+    width: auto;
     max-width: 400px;
+    object-fit: contain;
     margin: 25px 20px;
 }
 
@@ -608,6 +657,10 @@ main p {
     .content-right {
         width: 90%;
         margin: 10px 0;
+    }
+
+    .topics-list {
+        grid-template-columns: 1fr;
     }
 
 }
