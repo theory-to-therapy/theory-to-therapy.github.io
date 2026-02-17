@@ -9,14 +9,14 @@ function loadComponents() {
     <nav>
         <a href="index.html">
             <div class="logo">
-                <img src="images/the-amazing-conf-logo-blue-transparent.png" alt="Conference Logo" height="60px">
+               <img src="images/logo.png" alt="Conference Logo" height="60px">
             </div>
         </a>
         <ul class="main__ul">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Venue</a></li>
             <li><a href="schedule.html">Program</a></li>
             <li><a href="dates.html">Important Dates</a></li>
-            <li><a href="about.html">About & Venue</a></li>
             <li><a href="committee.html">Committee</a></li>
             <li><a href="registration.html" class="link-btn">Registration</a></li>
         </ul>
