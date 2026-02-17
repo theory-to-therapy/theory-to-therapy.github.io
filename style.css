@@ -35,6 +35,27 @@ nav {
     min-width: 80%;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 15px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d3d55;
+    line-height: 1.3;
+    max-width: 300px;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -278,17 +299,30 @@ main {
     padding: 20px 0px;
 }
 
+.sponsors a {
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.sponsors a:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
 .sponsors img {
     height: 100px;
     width: auto;
-    max-width: 400px;
     object-fit: contain;
     margin: 25px 20px;
 }
 
 main h1 {
     font-size: 48px;
-    color: #f97c00;
+    color: #3d64a7;
+}
+
+.cover-content h1 {
+    color: #0092f6;
 }
 
 main h2 {
@@ -626,6 +660,10 @@ main p {
 
     nav ul li a {
         color: #222;
+    }
+
+    .logo-text {
+        display: none;
     }
 
     main h1 {

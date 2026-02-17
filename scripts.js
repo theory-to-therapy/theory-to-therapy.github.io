@@ -10,6 +10,7 @@ function loadComponents() {
         <a href="index.html">
             <div class="logo">
                <img src="images/logo.png" alt="Conference Logo" height="60px">
+               <span class="logo-text">The Next Frontier in Medical Data 2026</span>
             </div>
         </a>
         <ul class="main__ul">
