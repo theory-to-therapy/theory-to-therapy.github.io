@@ -310,8 +310,8 @@ main {
 }
 
 .sponsors img {
-    height: 100px;
-    width: auto;
+    width: 200px;
+    height: auto;
     object-fit: contain;
     margin: 25px 20px;
 }
