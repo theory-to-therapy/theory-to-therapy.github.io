@@ -294,6 +294,21 @@ main {
     width: 60%;
 }
 
+.cover .sponsors div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: auto;
+}
+
+.cover .sponsors div img {
+    max-height: 80px;
+    width: auto;
+    margin: 0;
+}
+
 .sponsors h3 {
     font-size: 35px;
     padding: 20px 0px;
