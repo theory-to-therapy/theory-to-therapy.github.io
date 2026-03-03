@@ -176,7 +176,7 @@ main {
     align-items: center;
     justify-content: left;
     padding-left: 25px;
-    background-image: url("images/Large-scale_structure_of_light_distribution_in_the_universe.jpg");
+    background-image: url("images/internet-netzwerk-verknupfung.jpg");
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -294,18 +294,22 @@ main {
     width: 60%;
 }
 
+.cover .sponsors {
+    padding: 10px 0;
+    align-items: flex-start;
+}
+
 .cover .sponsors div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 1.5rem;
     width: auto;
 }
 
-.cover .sponsors div img {
-    max-height: 80px;
+.cover .sponsors img {
     width: auto;
+    max-height: 80px;
     margin: 0;
 }
 
