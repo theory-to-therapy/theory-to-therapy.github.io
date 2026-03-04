@@ -9,7 +9,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px; /* Offset for sticky menu */
+    scroll-padding-top: 90px;
 }
 
 #header {
@@ -67,7 +67,7 @@ nav ul {
 }
 
 nav ul li {
-    position: relative; /* Required for dropdown positioning */
+    position: relative;
     margin: 0 10px;
 }
 
@@ -98,9 +98,9 @@ nav ul li a:hover {
 
 /* Dropdown Menu */
 nav ul li ul.dropdown {
-    display: none; /* Hide dropdown initially */
+    display: none;
     position: absolute;
-    top: 100%; /* Position below parent <li> */
+    top: 100%;
     left: 0;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -110,7 +110,7 @@ nav ul li ul.dropdown {
 }
 
 nav ul li ul.dropdown li {
-    width: 150px; /* Set a fixed width for dropdown items */
+    width: 150px;
 }
 
 nav ul li ul.dropdown li a {
@@ -168,12 +168,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 90px - 40px); /* Subtracts header and footer heights */
+    min-height: calc(100vh - 90px - 40px);
 }
 
 .cover {
     display: flex;
-    height: calc(100vh - 90px); /* subtract menu height */
+    height: calc(100vh - 90px);
     align-items: center;
     justify-content: left;
     padding-left: 25px;
@@ -200,7 +200,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 90px - 40px); /* Subtract header and footer */
+    height: calc(100vh - 90px - 40px);
     padding: 45px 0px;
 }
 
@@ -226,7 +226,6 @@ main {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 
-    /* Scroll */
     flex: 1;
     overflow-y: auto;
 }
@@ -650,13 +649,14 @@ main p {
 
     /* ── Header & Navigation ── */
     header {
-        position: relative; /* containing block for hamburger & dropdown */
-        overflow: visible;   /* ensure dropdown below header is not clipped */
+        position: relative;
+        overflow: visible;
     }
 
     nav {
-        position: static; /* don't create a positioned ancestor — let nav ul anchor to header */
+        position: static;
         flex-direction: row;
+        justify-content: center;
         width: 100%;
     }
 
@@ -672,8 +672,8 @@ main p {
 
     nav ul {
         display: none;
-        position: absolute;  /* absolute, not fixed — avoids sticky clipping bug */
-        top: 100%;           /* flush below the header */
+        position: absolute;
+        top: 100%;
         right: 20px;
         width: 200px;
         background-color: #fcfcfc;
@@ -685,7 +685,7 @@ main p {
     }
 
     nav ul.showmenu {
-        display: flex;       /* specificity 0,1,2 — always beats nav ul at 0,0,2 */
+        display: flex;
         flex-direction: column;
     }
 
