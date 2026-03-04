@@ -33,12 +33,14 @@ function loadComponents() {
     `
 
     document.getElementById('header').innerHTML = header;
-    document.getElementById('footer').innerHTML = footer;
 
-    // responsive menu
+    // responsive menu — attach BEFORE footer so a missing #footer can't break navigation
     document.querySelector('#menu').addEventListener('click', ()=>{
         document.querySelector('nav ul').classList.toggle('showmenu');
     });
+
+    const footerEl = document.getElementById('footer');
+    if (footerEl) footerEl.innerHTML = footer;
 
 }
 
