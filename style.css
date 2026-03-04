@@ -650,12 +650,14 @@ main p {
 
     /* ── Header & Navigation ── */
     header {
-        position: relative; /* containing block for absolute hamburger icon */
+        position: relative; /* containing block for hamburger & dropdown */
+        overflow: visible;   /* ensure dropdown below header is not clipped */
     }
 
     nav {
-        position: relative;
-        flex-direction: column;
+        position: static; /* don't create a positioned ancestor — let nav ul anchor to header */
+        flex-direction: row;
+        width: 100%;
     }
 
     .box-icon {
@@ -669,20 +671,22 @@ main p {
     }
 
     nav ul {
-        background-color: #fcfcfc;
         display: none;
-        position: fixed;
-        top: 90px;  /* match header height so menu appears below it */
+        position: absolute;  /* absolute, not fixed — avoids sticky clipping bug */
+        top: 100%;           /* flush below the header */
         right: 20px;
         width: 200px;
+        background-color: #fcfcfc;
         padding: 10px 6px;
-        border-radius: 5px;
+        border-radius: 0 0 5px 5px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 999;
+        flex-direction: column;
     }
 
-    .showmenu {
-        display: block;
+    nav ul.showmenu {
+        display: flex;       /* specificity 0,1,2 — always beats nav ul at 0,0,2 */
+        flex-direction: column;
     }
 
     nav ul li {
