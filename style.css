@@ -478,8 +478,8 @@ main p {
 /* Speaker Cards */
 .speakers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     width: 100%;
     margin: 30px 0;
 }
@@ -488,12 +488,13 @@ main p {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 25px;
+    padding: 15px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .speaker-card:hover {
@@ -502,44 +503,61 @@ main p {
 }
 
 .speaker-photo {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 3px solid #0092f6;
 }
 
 .speaker-card h4 {
     color: #1d3d55;
-    margin: 10px 0 5px 0;
-    font-size: 20px;
+    margin: 5px 0 3px 0;
+    font-size: 16px;
 }
 
 .speaker-card .affiliation {
     color: #666;
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
     font-style: italic;
 }
 
 .speaker-card .bio {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 15px;
     color: #3a3a3a;
     line-height: 1.6;
-    margin: 10px 0;
     text-align: left;
+    z-index: 100;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.speaker-card:hover .bio {
+    display: block;
 }
 
 .speaker-links {
     display: flex;
-    gap: 15px;
-    margin-top: 15px;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
 }
 
 .speaker-links a {
     color: #0092f6;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -759,6 +777,10 @@ main p {
     .sponsors div {
         width: 90%;
         justify-content: center;
+    }
+
+    .speakers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
     /* ── Text pages — use more horizontal space ── */
