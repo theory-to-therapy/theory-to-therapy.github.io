@@ -531,7 +531,7 @@ main p {
 .speaker-card .bio {
     display: none;
     position: absolute;
-    top: 155px;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 320px;
@@ -817,10 +817,6 @@ main p {
     .speaker-photo {
         width: 90px;
         height: 90px;
-    }
-
-    .speaker-card .bio {
-        top: 120px;
     }
 
 }
