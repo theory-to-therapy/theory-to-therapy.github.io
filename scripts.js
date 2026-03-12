@@ -71,6 +71,34 @@ function markLastRowSpeakers() {
     }
 }
 
+function clampBioPosition(card) {
+    const bio = card.querySelector('.bio');
+    if (!bio) return;
+
+    // Reset to default centered position
+    bio.style.left = '50%';
+    bio.style.right = '';
+    bio.style.transform = 'translateX(-50%)';
+
+    // Force layout so we can measure
+    const bioRect = bio.getBoundingClientRect();
+    const viewportWidth = document.documentElement.clientWidth;
+    const cardRect = card.getBoundingClientRect();
+
+    if (bioRect.left < 4) {
+        // Overflows left: align bio's left edge to viewport left with small margin
+        const shift = cardRect.left - 4;
+        bio.style.left = -shift + 'px';
+        bio.style.transform = 'none';
+    } else if (bioRect.right > viewportWidth - 4) {
+        // Overflows right: align bio's right edge to viewport right with small margin
+        const shift = bioRect.right - (viewportWidth - 4);
+        const currentLeft = cardRect.width / 2 - bioRect.width / 2;
+        bio.style.left = (currentLeft - shift) + 'px';
+        bio.style.transform = 'none';
+    }
+}
+
 function setupSpeakerTapToggle() {
     const cards = document.querySelectorAll('.speaker-card');
     if (!cards.length) return;
@@ -86,7 +114,12 @@ function setupSpeakerTapToggle() {
             // Toggle the clicked one
             if (!wasActive) {
                 this.classList.add('bio-active');
+                clampBioPosition(this);
             }
+        });
+
+        card.addEventListener('mouseenter', function() {
+            clampBioPosition(this);
         });
     });
 

@@ -535,6 +535,7 @@ main p {
     left: 50%;
     transform: translateX(-50%);
     width: 320px;
+    max-width: 90vw;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -797,10 +798,6 @@ main p {
 
     .speaker-card {
         width: calc((100% - 30px) / 3);
-    }
-
-    .speaker-card .bio {
-        width: min(320px, 90vw);
     }
 
     /* ── Text pages — use more horizontal space ── */
