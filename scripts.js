@@ -44,4 +44,63 @@ function loadComponents() {
 
 }
 
-window.onload = loadComponents;
+function markLastRowSpeakers() {
+    const grid = document.querySelector('.speakers-grid');
+    if (!grid) return;
+    const cards = grid.querySelectorAll('.speaker-card');
+    if (!cards.length) return;
+
+    cards.forEach(c => c.classList.remove('last-row'));
+
+    let lastTop = -1;
+    const rows = [];
+    let currentRow = [];
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (lastTop !== -1 && Math.abs(top - lastTop) > 5) {
+            rows.push(currentRow);
+            currentRow = [];
+        }
+        currentRow.push(card);
+        lastTop = top;
+    });
+    if (currentRow.length) rows.push(currentRow);
+
+    if (rows.length > 1) {
+        rows[rows.length - 1].forEach(card => card.classList.add('last-row'));
+    }
+}
+
+function setupSpeakerTapToggle() {
+    const cards = document.querySelectorAll('.speaker-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't toggle if clicking a link
+            if (e.target.closest('a')) return;
+
+            const wasActive = this.classList.contains('bio-active');
+            // Close all open bios
+            cards.forEach(c => c.classList.remove('bio-active'));
+            // Toggle the clicked one
+            if (!wasActive) {
+                this.classList.add('bio-active');
+            }
+        });
+    });
+
+    // Close bio when tapping outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.speaker-card')) {
+            cards.forEach(c => c.classList.remove('bio-active'));
+        }
+    });
+}
+
+window.onload = function() {
+    loadComponents();
+    markLastRowSpeakers();
+    setupSpeakerTapToggle();
+};
+window.addEventListener('resize', markLastRowSpeakers);

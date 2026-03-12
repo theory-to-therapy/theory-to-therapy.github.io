@@ -550,6 +550,15 @@ main p {
     display: block;
 }
 
+.speaker-card.bio-active .bio {
+    display: block;
+}
+
+.speaker-card.last-row .bio {
+    top: auto;
+    bottom: 100%;
+}
+
 .speaker-links {
     display: flex;
     flex-direction: column;
