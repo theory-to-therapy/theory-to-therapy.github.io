@@ -17,6 +17,7 @@ function loadComponents() {
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About & Venue</a></li>
             <li><a href="schedule.html">Programme</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
             <li><a href="dates.html">Important Dates</a></li>
             <li><a href="committee.html">Committee</a></li>
             <li><a href="registration.html" class="link-btn">Registration</a></li>
